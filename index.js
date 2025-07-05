@@ -45,12 +45,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 mongoos.set("strictQuery", false);
 mongoos
-  .connect("mongodb+srv://ahemdelasmer:hmt8u7Kke85NjHTz@cluster0.i0tv4ld.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    //useCreateIndex:true,
-    //useFindAndModify:false
-  })
+  .connect(
+    "mongodb+srv://ahemdelasmer:hmt8u7Kke85NjHTz@cluster0.i0tv4ld.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      //useCreateIndex:true,
+      //useFindAndModify:false
+    }
+  )
   .then(() => {
     console.log("connected");
   })
