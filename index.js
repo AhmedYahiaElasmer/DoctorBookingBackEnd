@@ -187,6 +187,8 @@ const httpsOptions = {
   key: fs.readFileSync("./security/cert.key"),
   cert: fs.readFileSync("./security/cert.pem"),
 };
-const server = http.createServer(app).listen(8000, "0.0.0.0", () => {
-  console.log("server running at " + 8000);
-});
+// const server = http.createServer(app).listen(8000, "0.0.0.0", () => {
+//   console.log("server running at " + 8000);
+// });
+
+module.exports = serverless(app);
