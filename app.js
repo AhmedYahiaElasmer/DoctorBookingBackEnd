@@ -39,7 +39,7 @@ app.set("port", 4009);
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
-app.set("trust proxy", 1);
+// app.set("trust proxy", 1);
 // initialize body-parser to parse incoming parameters requests to req.body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
